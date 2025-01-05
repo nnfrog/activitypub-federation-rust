@@ -155,9 +155,9 @@ impl<T: Clone> FederationConfig<T> {
         };
 
         // Urls which use our local domain are not a security risk, no further verification needed
-        if self.is_local_url(url) {
-            return Ok(());
-        }
+        //if self.is_local_url(url) {
+        //    return Ok(());
+        //}
 
         if url.domain().is_none() {
             return Err(Error::UrlVerificationError("Url must have a domain"));
